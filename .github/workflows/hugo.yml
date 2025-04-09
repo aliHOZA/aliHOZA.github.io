@@ -9,9 +9,9 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
-          submodules: true
+          submodules: 'recursive'
           fetch-depth: 0
 
       - name: Setup Hugo
@@ -19,6 +19,11 @@ jobs:
         with:
           hugo-version: 'latest'
           extended: true
+
+      - name: Install Theme
+        run: |
+          mkdir -p themes
+          git clone --depth 1 https://github.com/McShelby/hugo-theme-relearn.git themes/hugo-theme-relearn
 
       - name: Build
         run: hugo --minify
