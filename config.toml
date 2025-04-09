@@ -1,4 +1,4 @@
-baseURL = "https://username.github.io/"
+baseURL = "https://aliHOZA.github.io/"
 languageCode = "en-us"
 title = "My Weblog"
 theme = "hugo-theme-relearn"
@@ -7,20 +7,17 @@ theme = "hugo-theme-relearn"
 home = ["HTML", "RSS", "JSON"]
 
 [params]
-  themeVariant = "relearn"
-  themeVariantAutoSwitch = false
-
+themeVariant = "relearn"
+themeVariantAutoSwitch = false
+editURL = "https://github.com/aliHOZA/aliHOZA.github.io/edit/main/content/"
+showVisitedLinks = true
+disableBreadcrumb = false
+customLogo = "/images/IranDirectory.png"
+  
 [menu]
   [[menu.main]]
-    identifier = "posts"
-    name = "Posts"
-    url = "/posts/"
-    weight = 10
-
-[params]
-  editURL = "https://github.com/username/username.github.io/edit/main/content/"
-  showVisitedLinks = true
-  disableBreadcrumb = false
-
-  [params]
-  customLogo = "/images/IranDirectory.png"
+  identifier = "posts"
+  name = "Posts"
+  url = "/posts/"
+  weight = 10
+    
